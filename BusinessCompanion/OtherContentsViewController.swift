@@ -18,18 +18,20 @@ class OtherContentsViewController: UIViewController {
         textView?.text = transcript
     }
 }
-// MARK: RecognizedTextDataSource
+
+  
 extension OtherContentsViewController: RecognizedTextDataSource {
     func addRecognizedText(recognizedText: [VNRecognizedTextObservation]) {
         // Create a full transcript to run analysis on.
         let maximumCandidates = 1
         for observation in recognizedText {
             guard let candidate = observation.topCandidates(maximumCandidates).first else { continue }
-            transcript += candidate.string
+//            transcript += candidate.string
             print(candidate.string)
-            print(VNRecognizedText())
+            print(candidate)
+//            print(VNRecognizedText())
             transcript += "\n"
-           
+
             // Always when Saved and Render Data Collected Run this function
             print("---------- TAG's --------------------------------")
         }
@@ -37,8 +39,10 @@ extension OtherContentsViewController: RecognizedTextDataSource {
     }
 }
 
-// Hygor Notes -->
-// Add Tag's + \n
+
+
+// Hygor Notes --> Data from OCR
+// Added Tag's + \n
 
 //Active Chilled Water
 //------------------------------------------

@@ -24,20 +24,39 @@ extension OtherContentsViewController: RecognizedTextDataSource {
     func addRecognizedText(recognizedText: [VNRecognizedTextObservation]) {
         // Create a full transcript to run analysis on.
         let maximumCandidates = 1
+        var readings = [String]()
+//        print(recognizedText[2].topCandidates(1).first?.string ?? "nada")
         for observation in recognizedText {
             guard let candidate = observation.topCandidates(maximumCandidates).first else { continue }
 //            transcript += candidate.string
             print(candidate.string)
-            print(candidate)
+            
+            var cameraString = candidate.string
+
+            if cameraString.contains("°F") {
+                let splitStrings = cameraString.split(separator: " ")
+              cameraString = String(splitStrings[0])
+                readings.append(cameraString)
+            }
+
+
+//            print(candidate)
 //            print(VNRecognizedText())
-            transcript += "\n"
+//            transcript += "\n"
 
             // Always when Saved and Render Data Collected Run this function
             print("---------- TAG's --------------------------------")
         }
-        textView?.text = transcript
+        print(readings)
+//        textView?.text = transcript
     }
 }
+
+
+
+
+
+// This should all be numbers
 
 
 

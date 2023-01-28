@@ -334,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MGC9KVGT4M;
+				DEVELOPMENT_TEAM = 64H6U72Q6B;
 				INFOPLIST_FILE = BusinessCompanion/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.BusinessCompanion${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MGC9KVGT4M;
+				DEVELOPMENT_TEAM = 64H6U72Q6B;
 				INFOPLIST_FILE = BusinessCompanion/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.BusinessCompanion${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

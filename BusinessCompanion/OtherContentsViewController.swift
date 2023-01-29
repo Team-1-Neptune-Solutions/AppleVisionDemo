@@ -19,14 +19,6 @@ class OtherContentsViewController: UIViewController {
         "U-tube Temperature",
         "HTG Vapour Temperature"
     ]
-    let suffixes = [
-        "°F",
-        "°F",
-        "%",
-        "°F",
-        "°F",
-        "°F"
-    ]
     var transcript = ""
 
     override func viewDidLoad() {

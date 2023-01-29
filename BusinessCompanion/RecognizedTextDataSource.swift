@@ -12,8 +12,3 @@ protocol RecognizedTextDataSource: AnyObject {
     func addRecognizedText(recognizedText: [VNRecognizedTextObservation])
   
 }
-
-
-//protocol ParsableScreen {
-//    func parseReadings(recognizedText: recognizedText: [VNRecognizedTextObservation])
-//}

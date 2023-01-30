@@ -54,7 +54,7 @@ extension OtherContentsViewController: RecognizedTextDataSource {
 //                title.append(filtered)
 //            }
             
-            if  !cameraString.contains("°F") &  {
+            if  !cameraString.contains("°F")   {
                 let splitStrings = cameraString.split(separator: " ")
 
               cameraString = String(splitStrings[0])

@@ -24,14 +24,16 @@ extension OtherContentsViewController: RecognizedTextDataSource {
     func addRecognizedText(recognizedText: [VNRecognizedTextObservation]) {
         // Create a full transcript to run analysis on.
         let maximumCandidates = 1
-        var readings = [String]()
-        var readings2 = [String]()
+        var parameters = [Double]()
+        var title = [String]()
+        
 //        print(recognizedText[2].topCandidates(1).first?.string ?? "nada")
         for observation in recognizedText {
             guard let candidate = observation.topCandidates(maximumCandidates).first else { continue }
 //            transcript += candidate.string
             print(candidate.string)
             
+
             print("Gil: \(candidate.string)")
             
             var cameraString = candidate.string
@@ -39,18 +41,28 @@ extension OtherContentsViewController: RecognizedTextDataSource {
             if cameraString.contains("°F") {
                 let splitStrings = cameraString.split(separator: " ")
               cameraString = String(splitStrings[0])
-                readings.append(cameraString)
+                parameters.append(Double(cameraString)!)
             }
             print("---------- MAXOO --------------------------------")
             
-            if !cameraString.contains("°F") {
+//            if !cameraString.contains("°F") {
+//                let splitStrings = cameraString.split(separator: " ")
+//              cameraString = String(splitStrings[0])
+//
+//                let filtered = cameraString.filter { $0 > 5 }
+//
+//                title.append(filtered)
+//            }
+            
+            if  !cameraString.contains("°F") &  {
                 let splitStrings = cameraString.split(separator: " ")
-                
+
               cameraString = String(splitStrings[0])
-                readings2.append(cameraString)
+                title.append(cameraString)
             }
-
-
+            
+            print("Gil  \(title)")
+     
 //            print(candidate)
 //            print(VNRecognizedText())
 //            transcript += "\n"
@@ -58,10 +70,11 @@ extension OtherContentsViewController: RecognizedTextDataSource {
             // Always when Saved and Render Data Collected Run this function
             print("---------- TAG's --------------------------------")
         }
-        print(readings)
+        print(parameters)
 //        textView?.text = transcript
     }
 }
+
 
 
 
